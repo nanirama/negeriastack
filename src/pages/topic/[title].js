@@ -122,7 +122,7 @@ const Header = (props) => {
     getTopicContent(title);
     window.scrollTo(0, 0);
     console.log('Page query 2',title)
-  }, [router.query.title]);
+  }, [router.query.title,setIsPageLoading,setTitle,setSEOTitle,getTopicContent]);
   //console.log('page Title', seoKeywords)
   useEffect(() => {
     if (articles && articles.length > 0) {
@@ -151,9 +151,9 @@ const Header = (props) => {
       {!isPageLoading && !showError && (       
         <div>   
            <Seo
-              title={seoTitle || ''}
-              description={seoDescription || ''}
-              keywords={seoKeywords || ''}
+              title={seoTitle}
+              description={seoDescription}
+              keywords={seoKeywords}
             />     
           <div
             className="separator"
