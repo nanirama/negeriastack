@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nigeriastack.com/
+
+# Sitemaps
+Sitemap: https://nigeriastack.com/sitemap.xml
+Sitemap: https://nigeriastack.com/server-sitemap.xml

@@ -1,0 +1,102 @@
+@import "~font-awesome/css/font-awesome.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --trending-color: #FFAD00;
+  --news-color: #547BFE;
+  --sports-color: #FE0A0A;
+  --technology-color: #00AEFF;
+  --business-color: #03BF23;
+  --home-color: #00C8BA;
+  --music-color: #F060E4;
+}
+
+.home {
+  --topic-color: var(--home-color);
+}
+.trending {
+  --topic-color: var(--trending-color);
+}
+.news {
+  --topic-color: var(--news-color);
+}
+.sports {
+  --topic-color: var(--sports-color);
+}
+.technology {
+  --topic-color: var(--technology-color);
+}
+.business {
+  --topic-color: var(--business-color);
+}
+.editor {
+  --topic-color: #a83291;
+}
+.music {
+  --topic-color: var(--music-color);
+}
+.backpage {
+  --topic-color: #a86b32;
+}
+
+.color-trending{ color: var(--trending-color) }
+.color-news{ color: var(--news-color) }
+.color-sports{ color: var(--sports-color) }
+.color-music{ color: var(--music-color) }
+.color-business{ color: var(--business-color) }
+.color-home{ color: var(--home-color) }
+
+.background-trending{ background: var(--trending-color) }
+.background-news{ background: var(--news-color) }
+.background-sports{ background: var(--sports-color) }
+.background-music{ background: var(--music-color) }
+.background-business{ background: var(--business-color) }
+.background-home{ background: var(--home-color) }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@font-face {
+  font-family: "ITC Clearface Std";
+  src: url("../shared/fonts/ClearfaceStd-Regular.woff2") format("woff2"),
+    url("../shared/fonts/ClearfaceStd-Regular.woff") format("woff"),
+    url("../shared/fonts/ClearfaceStd-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clearface";
+  src: url("../shared/fonts/Clearface-Heavy.woff2") format("woff2"),
+    url("../shared/fonts/Clearface-Heavy.woff") format("woff"),
+    url("../shared/fonts/Clearface-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("../shared/fonts/SofiaProLight.woff2") format("woff2"),
+    url("../shared/fonts/SofiaProLight.woff") format("woff"),
+    url("../shared/fonts/SofiaProLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Pro Bold";
+  src: url("../shared/fonts/SofiaPro-Bold.woff2") format("woff2"),
+    url("../shared/fonts/SofiaPro-Bold.woff") format("woff"),
+    url("../shared/fonts/SofiaPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
