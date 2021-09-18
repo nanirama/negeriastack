@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
+import { NextSeo } from 'next-seo';
 
 import { getHomeContent } from "../actions/HomeAction";
 import ErrorHandler from "../components/ErrorHandler";
@@ -112,6 +113,10 @@ const home = (props) => {
   return (
     <ErrorHandler>
       <div>
+      <NextSeo
+        title="Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
+        description="Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
+      />
         <Head>
           <meta charSet="utf-8" />
           <meta
