@@ -30,76 +30,76 @@ const Header = (props) => {
   const router = useRouter();
   console.log('My Props', props)
   
-  const setSEOTitle = (title) => {
-    switch (title) {
-      case "trending":
-        setSeoTitle(
-          "Latest Trending News and Headlines in Nigeria Today– Nigeria Stack"
-        );
-        setSeoDescription(
-          "Get all the latest Nigerian trending news at Nigeria stack. Read all political news, current affairs and news headlines online. Access special reports and other useful information too."
-        );
-        setSeoKeywords(
-          "latest trending headlines in Nigeria, latest nigerian trending news, latest trending news in Nigeria today          "
-        );
-        break;
-      case "news":
-        setSeoTitle(
-          "Latest Online Nigerian News &Headlines Today– Nigeria Stack"
-        );
-        setSeoDescription(
-          ": All the latest Nigerian news headlines today can be read on at Nigeria Stack. We bring live coverage 24 hours a day. You can expect balanced and in-depth reporting with a focus on global responsibility."
-        );
-        setSeoKeywords(
-          "Latest Nigerian news headlines today, Nigerian news headlines today online, nigerian news headline today"
-        );
-        break;
-      case "sports":
-        setSeoTitle(
-          "Latest Nigeria Sports Headlines and Breaking News– Nigeria Stack"
-        );
-        setSeoDescription(
-          "Just a click and explore breaking Nigeria sports news and any other related information. Quick updates with latest sports headlines in Nigeria at Nigeria stack."
-        );
-        setSeoKeywords(
-          "Latest Nigeria sports News, Breaking Nigeria sports News, latest sports headlines in Nigeria."
-        );
-        break;
-      case "tech":
-        setSeoTitle("Latest Nigerian technology News– Nigeria Stack.");
-        setSeoDescription(
-          "When it comes to technology then make yourself aware on latest technology by reading latest technology news in Nigeria. Explore more only at Nigeria stack and adapt to new."
-        );
-        setSeoKeywords(
-          "Latest technology news in Nigeria, Latest Nigerian technology News."
-        );
-        break;
-      case "business":
-        setSeoTitle(
-          "Latest Business News and Headlines in Nigeria– Nigeria Stack."
-        );
-        setSeoDescription(
-          " Business news must be latest to stay competitive and ahead of others. Read on  latest business headlines in Nigeria at Nigeria stack. Be alert to make the best decisions in your business."
-        );
-        setSeoKeywords(
-          "latest business headlines in Nigeria, Latest business news in Nigeria"
-        );
-        break;
-      case "music":
-        setSeoTitle(
-          "Latest and Trending Music Entertainment News in Nigeria– Nigeria Stack."
-        );
-        setSeoDescription(
-          "Find all about Nigeria on latest Nigerian entertainment news and trending topics. The definitive source for news in Nigeria at a click. Stay yourself updated."
-        );
-        setSeoKeywords(
-          "latest music entertainment news in nigeria, trending music entertainment news in nigeria, Latest Nigerian Entertainment News."
-        );
-        break;
-      default:
-        break;
-    }
-  };
+  // const setSEOTitle = (title) => {
+  //   switch (title) {
+  //     case "trending":
+  //       setSeoTitle(
+  //         "Latest Trending News and Headlines in Nigeria Today– Nigeria Stack"
+  //       );
+  //       setSeoDescription(
+  //         "Get all the latest Nigerian trending news at Nigeria stack. Read all political news, current affairs and news headlines online. Access special reports and other useful information too."
+  //       );
+  //       setSeoKeywords(
+  //         "latest trending headlines in Nigeria, latest nigerian trending news, latest trending news in Nigeria today          "
+  //       );
+  //       break;
+  //     case "news":
+  //       setSeoTitle(
+  //         "Latest Online Nigerian News &Headlines Today– Nigeria Stack"
+  //       );
+  //       setSeoDescription(
+  //         ": All the latest Nigerian news headlines today can be read on at Nigeria Stack. We bring live coverage 24 hours a day. You can expect balanced and in-depth reporting with a focus on global responsibility."
+  //       );
+  //       setSeoKeywords(
+  //         "Latest Nigerian news headlines today, Nigerian news headlines today online, nigerian news headline today"
+  //       );
+  //       break;
+  //     case "sports":
+  //       setSeoTitle(
+  //         "Latest Nigeria Sports Headlines and Breaking News– Nigeria Stack"
+  //       );
+  //       setSeoDescription(
+  //         "Just a click and explore breaking Nigeria sports news and any other related information. Quick updates with latest sports headlines in Nigeria at Nigeria stack."
+  //       );
+  //       setSeoKeywords(
+  //         "Latest Nigeria sports News, Breaking Nigeria sports News, latest sports headlines in Nigeria."
+  //       );
+  //       break;
+  //     case "tech":
+  //       setSeoTitle("Latest Nigerian technology News– Nigeria Stack.");
+  //       setSeoDescription(
+  //         "When it comes to technology then make yourself aware on latest technology by reading latest technology news in Nigeria. Explore more only at Nigeria stack and adapt to new."
+  //       );
+  //       setSeoKeywords(
+  //         "Latest technology news in Nigeria, Latest Nigerian technology News."
+  //       );
+  //       break;
+  //     case "business":
+  //       setSeoTitle(
+  //         "Latest Business News and Headlines in Nigeria– Nigeria Stack."
+  //       );
+  //       setSeoDescription(
+  //         " Business news must be latest to stay competitive and ahead of others. Read on  latest business headlines in Nigeria at Nigeria stack. Be alert to make the best decisions in your business."
+  //       );
+  //       setSeoKeywords(
+  //         "latest business headlines in Nigeria, Latest business news in Nigeria"
+  //       );
+  //       break;
+  //     case "music":
+  //       setSeoTitle(
+  //         "Latest and Trending Music Entertainment News in Nigeria– Nigeria Stack."
+  //       );
+  //       setSeoDescription(
+  //         "Find all about Nigeria on latest Nigerian entertainment news and trending topics. The definitive source for news in Nigeria at a click. Stay yourself updated."
+  //       );
+  //       setSeoKeywords(
+  //         "latest music entertainment news in nigeria, trending music entertainment news in nigeria, Latest Nigerian Entertainment News."
+  //       );
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   const getTopicContent = async (title) => {
     try {
@@ -216,14 +216,14 @@ const Header = (props) => {
   );
 };
 Header.getInitialProps = async ({ query }) => {
-  const {seoTitle, seoDescription, seoKeywords} = setSEOTitle(query.title)
+  const {seoTitle, seoDescription, seoKeywords} = getSEOData(query.title)
   return {
     seoTitle,
     seoDescription,
     seoKeywords
   }
 }
-export const setSEOTitle = (title) => {
+export const getSEOData = (title) => {
   let seoTitle = ''
   let seoDescription = ''
   let seoKeywords = ''
@@ -250,7 +250,7 @@ export const setSEOTitle = (title) => {
       break;
     case "business":
       seoTitle = "Latest Business News and Headlines in Nigeria– Nigeria Stack.";
-      seoDescription = " Business news must be latest to stay competitive and ahead of others. Read on  latest business headlines in Nigeria at Nigeria stack. Be alert to make the best decisions in your business.";
+      seoDescription = "Business news must be latest to stay competitive and ahead of others. Read on  latest business headlines in Nigeria at Nigeria stack. Be alert to make the best decisions in your business.";
       seoKeywords = "latest business headlines in Nigeria, Latest business news in Nigeria";
       break;
     case "music":
