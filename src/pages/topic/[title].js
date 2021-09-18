@@ -140,13 +140,11 @@ const Header = (props) => {
 
   return (
     <>
-    {seoTitle && (
       <Seo
-        title={seoTitle}
-        description={seoDescription}
-        keywords={seoKeywords}
+        title={seoTitle || ''}
+        description={seoDescription || ''}
+        keywords={seoKeywords || ''}
       />
-    )}
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
