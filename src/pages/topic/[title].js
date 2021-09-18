@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
+import { NextSeo } from 'next-seo';
 import { ROUTE_COLORS } from "../../constants/routeConstants/routeURL";
 import ErrorPage from "../../components/ErrorPage";
 import NewsItemLarge from "../../components/newsItem/newsItemLarge";
@@ -148,6 +148,10 @@ const Header = (props) => {
       {!isPageLoading && !showError && (
         <div>
           {seoTitle && (
+            <>
+             <NextSeo
+              description={seoDescription}
+            />
             <Head>
               <meta name="title" content={seoTitle}></meta>
               <meta name="description" content={seoDescription}></meta>
@@ -161,6 +165,7 @@ const Header = (props) => {
                 rel="stylesheet"
               />
             </Head>
+          </>
           )}
           <div
             className="separator"
