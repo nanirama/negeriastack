@@ -6,9 +6,9 @@ import PropTypes from "prop-types"
    return (
     <Head>
         <meta charSet="utf-8" />
-        {title && <title>{title}</title>}
-        {description && <meta name="description" content={description}/>}
-        {seoKeywords && <meta name="keywords" content={seoKeywords}></meta>}
+        <title>{title}</title>
+        <meta name="description" content={description}/>
+        <meta name="keywords" content={seoKeywords}></meta>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nigeriastack.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
