@@ -140,11 +140,7 @@ const Header = (props) => {
 
   return (
     <>
-      <Seo
-        title={seoTitle || ''}
-        description={seoDescription || ''}
-        keywords={seoKeywords || ''}
-      />
+      
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
@@ -152,8 +148,13 @@ const Header = (props) => {
           <div className="loader" id="loader-1"></div>
         </div>
       )}
-      {!isPageLoading && !showError && (
-        <div>        
+      {!isPageLoading && !showError && (       
+        <div>   
+           <Seo
+              title={seoTitle || ''}
+              description={seoDescription || ''}
+              keywords={seoKeywords || ''}
+            />     
           <div
             className="separator"
             style={{ color: ROUTE_COLORS[`${title}`] }}
