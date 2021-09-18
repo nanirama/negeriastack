@@ -114,8 +114,7 @@ const home = (props) => {
     <ErrorHandler>
       <div>
       <NextSeo
-        title="Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
-        description="New Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
+        description="1 Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
       />
         <Head>
           <meta charSet="utf-8" />
@@ -125,7 +124,7 @@ const home = (props) => {
           ></meta>
           <meta
             name="description"
-            content="Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."   ></meta>
+            content="2 Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."   ></meta>
           <meta
             name="keywords"
             content="Latest Nigerian News, Naija Breaking News Today, nigerian newspapers headlines, Latest Nigerian breaking news today"
