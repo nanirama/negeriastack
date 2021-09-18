@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import { NextSeo } from 'next-seo';
-
+import Seo from '../components/Seo'
 import { getHomeContent } from "../actions/HomeAction";
 import ErrorHandler from "../components/ErrorHandler";
 import ErrorPage from "../components/ErrorPage";
@@ -113,22 +113,12 @@ const home = (props) => {
   return (
     <ErrorHandler>
       <div>
-      <NextSeo
-        description="Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
-      />
+        <Seo
+          title="Home Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
+          description="Home Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
+          keywords="Home Latest Nigerian News, Naija Breaking News Today, nigerian newspapers headlines, Latest Nigerian breaking news today"
+        />
         <Head>
-          <meta charSet="utf-8" />
-          <meta
-            name="title"
-            content="Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
-          ></meta>
-          <meta
-            name="description"
-            content="2 Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."   ></meta>
-          <meta
-            name="keywords"
-            content="Latest Nigerian News, Naija Breaking News Today, nigerian newspapers headlines, Latest Nigerian breaking news today"
-          ></meta>
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"

@@ -42,10 +42,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        {/* <title>
+      {/* <Head>
+        <title>
           Latest Nigerian News and Naija Breaking News Today – NigeriaStack
-        </title> */}
+        </title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nigeriastack.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://nigeriastack.com/static/media/Logo.png"
         />
-      </Head>
+      </Head> */}
       <main>
         <Header />
         <ErrorHandler>
