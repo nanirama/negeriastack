@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
  import Head from "next/head";
  
  function Seo({ description, title, seoKeywords }) {
-   console.log('Seo Data from seo file', title)
    return (
     <Head>
         <meta charSet="utf-8" />
