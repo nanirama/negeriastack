@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { NextSeo } from 'next-seo';
+import Seo from '../../components/Seo'
 import { ROUTE_COLORS } from "../../constants/routeConstants/routeURL";
 import ErrorPage from "../../components/ErrorPage";
 import NewsItemLarge from "../../components/newsItem/newsItemLarge";
@@ -140,14 +140,13 @@ const Header = (props) => {
 
   return (
     <>
-    <NextSeo description="welome"/>
-    <Head>
-        <title>
-        Welcome 3
-        </title>
-        <meta name="title" content="Welcome 3"></meta>
-        <meta name="description" content="Welcome 3Welcome 3Welcome 3Welcome 3"></meta>
-    </Head>
+    {seoTitle && (
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+      />
+    )}
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
@@ -159,26 +158,11 @@ const Header = (props) => {
         <div>
          
           {seoTitle && (
-            <>
-             <NextSeo
+            <Seo
+              title={seoTitle}
               description={seoDescription}
+              keywords={seoKeywords}
             />
-             Page Title : {seoTitle}
-             Page Description : {seoDescription}
-            <Head>
-              <meta name="title" content={seoTitle}></meta>
-              <meta name="description" content={seoDescription}></meta>
-              <meta name="keywords" content={seoKeywords}></meta>
-              <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-              />
-              <link
-                href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                rel="stylesheet"
-              />
-            </Head>
-          </>
           )}
           <div
             className="separator"

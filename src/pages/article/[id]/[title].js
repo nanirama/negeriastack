@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
+import Seo from '../../../components/Seo'
 import { getArticleContent } from "../../../actions/ArticleAction";
 import { getHomeContent } from "../../../actions/HomeAction";
 import ErrorPage from "../../../components/ErrorPage";
@@ -90,7 +90,11 @@ const Article = ({ articleTitle, articleDescription, articleImage }) => {
   }, [router.query]);
   return (
     <div className="container-fluid">
-      {/* Twitter Card */}
+      <Seo
+          title={articleTitle}
+          description="Get access to all the latest trending news in Nigeria and know what’s happening around you. NigeriaStack features exclusive headlines and top stories online here. "
+          keywords="newspaper headlines today in nigeria, nigeria news today headlines,latest nigeria news headlines, nigeria news papers headlines today, nigeria newspapers headlines, nigeria newspaper headlines online, nigeria newspaper headlines today online, nigerian newspapers headlines today online, latest nigeria newspaper headlines today, nigeria newspaper headlines online today."
+        />
       <Head>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:site" content="@nigeriastack"></meta>
@@ -145,23 +149,6 @@ const Article = ({ articleTitle, articleDescription, articleImage }) => {
                             }
                         }`}
               </script>
-
-              <meta
-                name="description"
-                content="Get access to all the latest trending news in Nigeria and know what’s happening around you. NigeriaStack features exclusive headlines and top stories online here. "
-              ></meta>
-              <meta
-                name="keywords"
-                content="newspaper headlines today in nigeria, nigeria news today headlines,latest nigeria news headlines, nigeria news papers headlines today, nigeria newspapers headlines, nigeria newspaper headlines online, nigeria newspaper headlines today online, nigerian newspapers headlines today online, latest nigeria newspaper headlines today, nigeria newspaper headlines online today."
-              ></meta>
-              <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-              />
-              <link
-                href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                rel="stylesheet"
-              />
             </Head>
           )}
 

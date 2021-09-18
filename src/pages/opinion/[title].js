@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import Seo from '../../components/Seo'
 import { getOpinionContent } from "../../actions/OpinonAction";
 import { ROUTE_COLORS } from "../../constants/routeConstants/routeURL";
 import ErrorPage from "../../components/ErrorPage";
@@ -122,11 +122,11 @@ const Opinion = (props) => {
       {!isPageLoading && !showError && (
         <div>
           {seoTitle && (
-            <Head>
-              <title>{seoTitle}</title>
-              <meta name="description" content={seoDescription}></meta>
-              <meta name="keywords" content={seoKeywords}></meta>
-            </Head>
+            <Seo
+              title={seoTitle}
+              description={seoDescription}
+              keywords={seoKeywords}
+            />
           )}
           <div
             className="text-center topic-title"

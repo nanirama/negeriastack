@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { NextSeo } from 'next-seo';
 import Seo from '../components/Seo'
 import { getHomeContent } from "../actions/HomeAction";
 import ErrorHandler from "../components/ErrorHandler";
@@ -114,19 +113,11 @@ const home = (props) => {
     <ErrorHandler>
       <div>
         <Seo
-          title="Home Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
-          description="Home Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
-          keywords="Home Latest Nigerian News, Naija Breaking News Today, nigerian newspapers headlines, Latest Nigerian breaking news today"
+          title="Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
+          description="Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
+          keywords="Latest Nigerian News, Naija Breaking News Today, nigerian newspapers headlines, Latest Nigerian breaking news today"
         />
         <Head>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-          />
-          <link
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            rel="stylesheet"
-          />
           <script type="application/ld+json">
             {`{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nigeriastack.com/","name":"Home"}}]}`}
           </script>
