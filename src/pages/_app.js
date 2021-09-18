@@ -43,9 +43,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>
+        {/* <title>
           Latest Nigerian News and Naija Breaking News Today – NigeriaStack
-        </title>
+        </title> */}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nigeriastack.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
