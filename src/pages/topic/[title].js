@@ -140,9 +140,11 @@ const Header = (props) => {
 
   return (
     <>
-    {seoTitle && (
-      <NextSeo description={seoDescription} />
-    )}
+    <NextSeo description="welome"/>
+    <Head>
+        <meta name="title" content="Welcome 3"></meta>
+        <meta name="description" content="Welcome 3Welcome 3Welcome 3Welcome 3"></meta>
+    </Head>
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
