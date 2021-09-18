@@ -139,7 +139,14 @@ const Header = (props) => {
   }, [articles]);
 
   return (
-    <>   
+    <>
+    {seoTitle && (
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+      />
+    )}
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
@@ -148,15 +155,7 @@ const Header = (props) => {
         </div>
       )}
       {!isPageLoading && !showError && (
-        <div>
-         
-          {seoTitle && (
-            <Seo
-              title={seoTitle}
-              description={seoDescription}
-              keywords={seoKeywords}
-            />
-          )}
+        <div>        
           <div
             className="separator"
             style={{ color: ROUTE_COLORS[`${title}`] }}
