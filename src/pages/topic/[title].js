@@ -142,6 +142,9 @@ const Header = (props) => {
     <>
     <NextSeo description="welome"/>
     <Head>
+        <title>
+        Welcome 3
+        </title>
         <meta name="title" content="Welcome 3"></meta>
         <meta name="description" content="Welcome 3Welcome 3Welcome 3Welcome 3"></meta>
     </Head>
