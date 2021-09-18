@@ -115,7 +115,7 @@ const home = (props) => {
       <div>
       <NextSeo
         title="Latest Nigerian News and Naija Breaking News Today – Nigeria Stack"
-        description="Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
+        description="New Stay yourself updated with top of Nigeria news and latest developments on the ground with fact-based news, exclusive video footage and updated maps. Explore Nigerian newspapers headlines."
       />
         <Head>
           <meta charSet="utf-8" />
