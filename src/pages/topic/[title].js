@@ -121,8 +121,9 @@ const Header = (props) => {
     setSEOTitle(title);
     getTopicContent(title);
     window.scrollTo(0, 0);
+    console.log('Page query 2',title)
   }, [router.query.title]);
-
+  //console.log('page Title', seoKeywords)
   useEffect(() => {
     if (articles && articles.length > 0) {
       setIsPageLoading(false);
@@ -138,6 +139,10 @@ const Header = (props) => {
   }, [articles]);
 
   return (
+    <>
+    {seoTitle && (
+      <NextSeo description={seoDescription} />
+    )}
     <div className="container-fluid topic-page-container">
       {showError && <ErrorPage />}
       {isPageLoading && !showError && (
@@ -147,11 +152,14 @@ const Header = (props) => {
       )}
       {!isPageLoading && !showError && (
         <div>
+         
           {seoTitle && (
             <>
              <NextSeo
               description={seoDescription}
             />
+             Page Title : {seoTitle}
+             Page Description : {seoDescription}
             <Head>
               <meta name="title" content={seoTitle}></meta>
               <meta name="description" content={seoDescription}></meta>
@@ -222,6 +230,7 @@ const Header = (props) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
